@@ -1,7 +1,14 @@
 from selenium import webdriver
 
+
+# for local testing
+ADDRESS = 'http://localhost:8000'
+
+# for remote testing
+# ADDRESS = TBD
+
 browser = webdriver.Firefox()
-browser.get('http://localhost:8000')
+browser.get(ADDRESS)
 
 
 # test that Django server can run
