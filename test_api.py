@@ -12,9 +12,10 @@ def smoke_test():
 
 def test_user_creation():
     """Testing ability to create a user with a call to the wishlist API"""
-    response = post(ADDRESS+'user', data={'username': 'brother.bear',
-                                          'first_name': 'Brother Bear',
-                                          'last_name': 'Berenstain',
-                                          'password': 'password',
-                                          'email': 'bro.berenstain@gmail.com'})
+    response = post(ADDRESS+'user/', data={'username': 'brother.bear',
+                                           'first_name': 'Brother Bear',
+                                           'last_name': 'Berenstain',
+                                           'password': 'password',
+                                           'email': 'bro.berenstain@gmail.com',
+                                           })
     assert (response.status_code == 201)
